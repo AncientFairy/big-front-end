@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>外边距合并之嵌套块元素垂直外边距的塌陷</title>
+    <style>
+      /* 
+        对于两个嵌套关系（父子关系）的有块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值。
+        解决方案：
+            ①为父元素定义上边框。
+            ②为父元素定义上内边距。
+            ③可以为父元素添加overflow:hidden。
+            ……
+      */
+      .box1 {
+        width: 400px;
+        height: 400px;
+        background-color: pink;
+        margin-top: 50px;
+        /* 解决方案：打开下面的代码等 */
+        /* border-top: 1px solid transparent; */
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: deeppink;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>
