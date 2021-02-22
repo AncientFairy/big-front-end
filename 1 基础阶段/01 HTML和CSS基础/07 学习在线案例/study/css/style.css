@@ -7,3 +7,30 @@
   width: 1200px;
   margin: 0 auto;
 }
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* 头部 */
+.header {
+  height: 42px;
+  background-color: pink;
+  margin: 30px auto;
+}
+/* 头部 --> logo */
+.logo {
+  float: left;
+  width: 198px;
+  height: 42px;
+  /* margin-right: 33px; */
+  background-color: purple;
+}
+/* 头部 --> 导航 */
+.nav {
+  float: left;
+  width: 200px;
+  height: 42px;
+  background-color: orange;
+}
