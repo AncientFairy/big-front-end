@@ -232,3 +232,17 @@ body {
 .box-bd ul li img {
   width: 100%;
 }
+.box-bd ul li h4 {
+  font-size: 14px;
+  margin: 20px 20px 20px 25px;
+  color: #050505;
+  font-weight: normal;
+}
+.box-bd ul li .info {
+  font-size: 14px;
+  margin-left: 20px;
+}
+.box-bd ul li .info em {
+  font-style: normal;
+  color: #ff7c2d;
+}
