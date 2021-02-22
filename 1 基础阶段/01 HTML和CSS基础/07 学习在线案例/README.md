@@ -36,7 +36,6 @@
 # 5 CSS属性书写顺序
 
 * 建议遵循以下顺序：
-
 * ①布局定位属性：display / position / float / clear / visibility / overflow（建议 display 第一个写，毕竟关系到模式）
 * ②自身属性：width / height / margin / padding / border / background
 * ③文本属性：color / font / text-decoration / text-align / vertical-align / white- space / break-word
