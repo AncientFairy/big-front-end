@@ -43,6 +43,51 @@
 
 
 
+* 示例：
+
+```css
+.jdc {
+    display: block; 
+    position: relative; 
+    float: left; 
+    width: 100px; 
+    height: 100px; 
+    margin: 0 10px; 
+    padding: 20px 0;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; 
+    color: #333;
+	background: rgba(0,0,0,.5); border-radius: 10px;
+}
+```
+
+
+
+# 6 页面布局整体思路
+
+* 为了提高网页制作的效率，布局的时候通常有以下的整体思路：
+* ①必须确定页面的版心（可视区），我们测量可知。
+* ②分析页面中的行模块，以及每个行模块中的列模块。其实页面布局，就是一行行罗列而成的。
+* ③制作HTML结构。我们需要遵循先有结构，后有样式的原则。结构永远最重要。
+* ④开始运用盒子模型的原理，通过div+css布局来控制网页的各个模块。
+
+
+
+# 7 确定版心
+
+* 这个页面的版心是1200px，每个版心都要水平居中对齐，可以定义版心为公共类：
+
+```css
+/* 版心 */
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+```
+
+
+
+
+
 
 
 
