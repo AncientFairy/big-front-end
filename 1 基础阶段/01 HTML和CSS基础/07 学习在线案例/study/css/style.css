@@ -24,17 +24,56 @@ a {
   float: left;
   width: 198px;
   height: 42px;
-  margin-right: 33px;
   background-color: purple;
 }
 /* 头部 --> 导航 */
 .nav {
   float: left;
-  width: 200px;
   height: 42px;
-  background-color: orange;
+  margin-left: 60px;
 }
 .nav li {
-  display: inline-block;
+  float: left;
+  margin: 0 15px;
+}
+.nav li a {
+  display: block;
+  height: 42px;
   line-height: 42px;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #050505;
+}
+.nav li a:hover {
+  border-bottom: 2px solid #00a4ff;
+  color: #00a4ff;
+}
+/* 头部 --> 搜索框 */
+.search {
+  float: left;
+  width: 412px;
+  height: 42px;
+  margin-left: 50px;
+  background-color: skyblue;
+}
+/* input和button是行内块元素，中间有缝隙，所以需要浮动 */
+.search input {
+  float: left;
+  width: 340px;
+  height: 40px;
+  padding-left: 20px;
+  border: 1px solid #00a4ff;
+  border-right: 0;
+  outline: none;
+  font-size: 14px;
+  color: #bfbfbf;
+}
+.search button {
+  float: left;
+  width: 50px;
+  height: 42px;
+  /* button默认有边框，需要我们手动去除 */
+  border: 0;
+  outline: none;
+  background: url(../images/btn.png) no-repeat;
 }
