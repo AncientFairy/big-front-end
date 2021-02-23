@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绝对定位之祖先元素没有定位</title>
+    <style>
+      /* 绝对定位是元素在移动位置的时候，相对于它的祖先元素来说的 */
+      /* 如果没有祖先元素或祖先元素没有定位，则是以浏览器为准进行定位的 */
+      .father {
+        width: 400px;
+        height: 400px;
+        background-color: red;
+        margin: 100px auto;
+      }
+      .son {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+  </body>
+</html>
