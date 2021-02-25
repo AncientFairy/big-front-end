@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /* ①必须是input同时具有value这个属性 */
+        input[value] {
+            color: pink;
+        }
+
+        /* ②必须是input同时具有type属性的值是text */
+        /* input[type='text'] {
+            background-color: pink;
+        } */
+        /* ③必须是div同时具有class属性，且class属性值以icon开头的 */
+        div[class^='icon'] {
+            background-color: pink;
+        }
+
+        /* ④必须是div同时具有class属性，且class属性值以data结尾的 */
+        div[class$='data'] {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ① 利用属性选择器可以不用借助于类或id选择器 -->
+    <input type="text" name="" id="" value="请输入用户名">
+    <input type="text" name="" id="">
+    <!-- ② 属性选择可以选择属性=值的某些元素 -->
+    <!-- <input type="text" name="" id="">
+    <input type="password" name="" id=""> -->
+    <!-- ③ 属性选择器可以选择属性值开头的某些元素 -->
+    <div class="icon1">小图标1</div>
+    <div class="icon2">小图标2</div>
+    <div class="icon3">小图标3</div>
+    <div class="icon4">小图标4</div>
+    <div>我是打酱油的</div>
+    <!-- ④ 属性选择器可以选择属性值结尾的某些元素 -->
+    <div class="a-data">我是安其拉</div>
+    <div class="a-data">我是哥斯拉</div>
+    <div>我是雷锋</div>
+</body>
+
+</html>
