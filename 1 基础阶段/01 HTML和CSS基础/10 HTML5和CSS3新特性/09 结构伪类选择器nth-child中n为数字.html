@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器nth-child中n为数字</title>
+    <style>
+        /* 
+            nth-child(n)：选择某个父元素的一个或多个特定的子元素
+            - n可以是数字，关键字和公式。
+            - n如果是数字，就是选择第几个元素，里面数字从1开始。
+            - 常见的关键字even偶数、odd奇数。
+            - 常见的公式如下（如果n是公式，则从0开始计算，但是第0个元素或者超出了元素的个数会被限制）。
+
+            公式  	取值              
+            2n  	偶数              
+            2n+1	奇数              
+            5n  	5   10  15 ...  
+            n+5 	从第5个开始（包含第五个）到最后
+            -n+5	前5个（包含第5个）...  
+         */
+
+        /* 选择第2个元素 */
+        ul li:nth-child(2) {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+</body>
+
+</html>
