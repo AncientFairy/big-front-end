@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3盒子模型</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        div.prev {
+            background-color: pink;
+            border: 20px solid red;
+            padding: 15px;
+            /* 盒子大小宽度为 width+ padding + border，盒子大小高度，同样这样计算 */
+            box-sizing: content-box;
+        }
+
+        div.current {
+            background-color: pink;
+            border: 20px solid blueviolet;
+            padding: 15px;
+            /* 盒子大小宽度为width，盒子大小高度为height  */
+            /* 如果盒子模型我们修改为box-sizing：border-box;，那么padding和border就不会撑大盒子了（前提padding和border不会超过为width和height的大小） */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="prev">CSS3盒子模型</div>
+    <div class="current">CSS3盒子模型</div>
+</body>
+
+</html>
