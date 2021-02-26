@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进度条</title>
+    <style>
+        .box1 {
+            width: 250px;
+            height: 15px;
+            border: 1px solid red;
+            border-radius: 7px;
+            margin: 100px auto;
+            padding: 1px;
+        }
+
+        .box2 {
+            width: 10%;
+            height: 100%;
+            border-radius: 7px;
+            background-color: skyblue;
+            /* 过渡 */
+            transition: width 0.7s;
+        }
+
+        .box1:hover .box2 {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>
