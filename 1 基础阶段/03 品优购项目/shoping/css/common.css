@@ -165,6 +165,7 @@
   background-color: #c81623;
   font-size: 14px;
   line-height: 30px;
+  margin-top: 2px;
 }
 .dropdown .dd li {
   position: relative;
@@ -196,5 +197,16 @@
 .dropdown .dd li:hover::after {
   color: #c81623;
 }
-
-/*===========  =============*/
+.navitems li {
+  float: left;
+}
+.navitems li a {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  padding: 0 25px;
+}
+/*===========尾部=============*/
+.footer {
+}
