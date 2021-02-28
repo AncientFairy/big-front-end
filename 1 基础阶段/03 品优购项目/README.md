@@ -218,6 +218,16 @@
 
 ![nav导航制作1号盒子](images/nav导航制作1号盒子.png)
 
+## 3.7 footer底部制作
+
+![footer底部制作](images/footer底部制作.png)
+
+* footer页面底部盒子通栏给一个高度和灰色的背景。
+* footer里面有一个大的版心。
+* 版心里面包含1号盒子，mod_service是服务模块，mod是模块的意思。
+* 版心里面包含2号盒子，mod_help是帮助模块。
+* 版心里面包含3号盒子，mod_copyright是版权模块。
+
 
 
 # 4 品优购列表页制作
