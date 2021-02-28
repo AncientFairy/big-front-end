@@ -1,5 +1,31 @@
 /* CSS公共样式文件 */
+/* 版心 */
 .w {
   width: 1200px;
   margin: 0 auto;
+}
+/* 左浮动 */
+.fl {
+  float: left;
+}
+/* 右浮动 */
+.fr {
+  float: right;
+}
+
+.style_red {
+  color: #c81323;
+}
+
+/* 快捷导航模块 */
+.shortcut {
+  height: 31px;
+  background-color: #f1f1f1;
+  line-height: 31px;
+}
+.shortcut li {
+  float: left;
+}
+.shortcut .w .fl li:first-of-type {
+  margin-right: 1px;
 }
