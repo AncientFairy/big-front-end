@@ -28,17 +28,21 @@
 .style_red {
   color: #c81323;
 }
-/* 快捷导航模块 */
+/*===========快捷导航模块=============*/
 .shortcut {
   height: 31px;
   background-color: #f1f1f1;
   line-height: 31px;
+  font-size: 12px;
 }
 .shortcut li {
   float: left;
 }
 .shortcut .fl li:first-of-type {
   margin-right: 1px;
+}
+.shortcut .fl a:first-of-type {
+  margin-right: 6px;
 }
 .shortcut .fr li:nth-of-type(even) {
   width: 1px;
@@ -51,11 +55,11 @@
   font-family: "icomoon";
   margin-left: 6px;
 }
-/* 头部 */
+/*===========头部模块=============*/
 .header {
   position: relative;
   height: 105px;
-  background-color: pink;
+  background-color: skyblue;
 }
 /* logo */
 .logo {
@@ -64,11 +68,132 @@
   left: 0;
   width: 171px;
   height: 61px;
-  font-size: 0;
 }
-.logo a{
+.logo a {
   display: block;
   width: 171px;
   height: 61px;
-  background: url("../images/logo.png") no-repeat top center ;
+  background: url("../images/logo.png") no-repeat top center;
+  /* 让文字隐藏 */
+  font-size: 0;
 }
+/* search */
+.search {
+  position: absolute;
+  top: 25px;
+  left: 346px;
+  width: 538px;
+  height: 36px;
+  border: 2px solid #b1191a;
+}
+.search input {
+  width: 454px;
+  height: 32px;
+  padding-left: 12px;
+}
+.search button {
+  width: 80px;
+  height: 32px;
+  color: #fff;
+  background-color: #b1191a;
+  font-size: 16px;
+}
+/* 热词 */
+.hotwords {
+  position: absolute;
+  top: 66px;
+  left: 346px;
+}
+.hotwords a {
+  margin: 0 10px;
+}
+/* 购物车 */
+.shopcar {
+  position: absolute;
+  top: 25px;
+  right: 60px;
+  width: 140px;
+  height: 35px;
+  border: 1px solid #dfdfdf;
+  background-color: #f7f7f7;
+  line-height: 35px;
+  text-align: center;
+}
+.shopcar::before {
+  content: "\e93a";
+  font-family: "icomoon";
+  color: #dc6161;
+}
+.shopcar::after {
+  content: "\e920";
+  font-family: "icomoon";
+  color: #666;
+}
+/* 统计部分 */
+.shopcar .count {
+  position: absolute;
+  top: -5px;
+  left: 105px;
+  color: #fff;
+  background-color: #e60002;
+  height: 14px;
+  line-height: 14px;
+  padding: 0 5px;
+  border-radius: 7px 7px 7px 0;
+  -webkit-border-radius: 7px 7px 7px 0;
+  -moz-border-radius: 7px 7px 7px 0;
+  -ms-border-radius: 7px 7px 7px 0;
+  -o-border-radius: 7px 7px 7px 0;
+}
+/*===========nav模块=============*/
+.nav {
+  height: 47px;
+  border-bottom: 2px solid #b1191a;
+}
+.nav .dropdown {
+  width: 210px;
+  height: 45px;
+  background-color: #b1191a;
+}
+.dropdown .dt {
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 16px;
+}
+.dropdown .dd {
+  height: 465px;
+  background-color: #c81623;
+  font-size: 14px;
+  line-height: 30px;
+}
+.dropdown .dd li {
+  position: relative;
+  height: 31px;
+  line-height: 31px;
+  position: relative;
+  margin-left: 2px;
+  padding-left: 10px;
+}
+.dropdown .dd li:hover {
+  background-color: #fff;
+}
+.dropdown .dd li a {
+  font-size: 14px;
+  color: #fff;
+}
+.dropdown .dd li::after {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  content: "\e920";
+  font-family: "icomoon";
+  color: #fff;
+  font-size: 14px;
+}
+.dropdown .dd li:hover a,
+.dropdown .dd li:hover::after {
+  color: #c81623;
+}
+
+/*===========  =============*/
