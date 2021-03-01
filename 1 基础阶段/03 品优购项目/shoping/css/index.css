@@ -103,8 +103,8 @@
   float: left;
   position: relative;
 }
-.recom .recom_bd li::after {
-  content: '';
+.recom .recom_bd li:nth-child(-n + 3):after {
+  content: "";
   position: absolute;
   right: 0;
   top: 10px;
