@@ -256,6 +256,15 @@
 * 可以让lifeservice里面的ul宽度为252，就可以装下4个小li。
 * lifeservice盒子overflow隐藏多余的部分就可以了。
 
+## 3.9 推荐模块制作
+
+![推荐模块](images/推荐模块.png)
+
+* 大盒子recom推荐模块 recommend。
+* 里面包含2个盒子，浮动即可。
+* 1号盒子recom_hd。
+* 2号盒子recom_bd，注意里面的小竖线。
+
 
 
 
