@@ -157,3 +157,67 @@
   color: #df3033;
   font-weight: bold;
 }
+/*===========楼层区模块=============*/
+/* 家用电器 */
+.hea .box_hd {
+  height: 30px;
+  border-bottom: 2px solid #c81623;
+  margin-top: 30px;
+}
+.hea .box_hd h3 {
+  float: left;
+  font-weight: normal;
+  font-size: 18px;
+  color: #c81623;
+}
+.hea .tab-list {
+  float: right;
+  line-height: 30px;
+}
+.hea .tab-list li {
+  float: left;
+}
+.hea .tab-list li a {
+  margin: 0 15px;
+}
+.hea .box_bd {
+  height: 361px;
+}
+/* 隐藏其他的div */
+.hea .box_bd .tab-content div:nth-child(n + 2) {
+  display: none;
+}
+.tab-list-item li {
+  float: left;
+}
+.col_210 {
+  text-align: center;
+  width: 210px;
+  height: 361px;
+  background-color: #f9f9f9;
+}
+.col_210 ul {
+  padding-left: 12px;
+}
+.col_210 li {
+  float: left;
+  text-align: center;
+  width: 85px;
+  height: 34px;
+  font-size: 12px;
+  line-height: 33px;
+  border-bottom: 1px solid #ccc;
+  margin-right: 10px;
+}
+.col_329 {
+  width: 329px;
+  height: 361px;
+}
+.col_221 {
+  width: 221px;
+  height: 361px;
+}
+.col_219 {
+  width: 219px;
+  height: 361px;
+}
