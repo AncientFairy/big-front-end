@@ -216,8 +216,14 @@
 .col_221 {
   width: 221px;
   height: 361px;
+  border-right: 1px solid #ccc;
 }
 .col_219 {
   width: 219px;
   height: 361px;
+}
+.col_221 .bb,
+.col_219 .bb {
+  display: block;
+  border-bottom: 1px solid #ccc;
 }
