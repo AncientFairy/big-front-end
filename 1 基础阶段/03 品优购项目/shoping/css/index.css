@@ -103,6 +103,10 @@
   float: left;
   position: relative;
 }
+.recom .recom_bd li img {
+  width: 248px;
+  height: 163px;
+}
 .recom .recom_bd li:nth-child(-n + 3):after {
   content: "";
   position: absolute;
@@ -111,4 +115,45 @@
   width: 1px;
   height: 145px;
   background-color: #ddd;
+}
+/*===========猜您喜欢模块=============*/
+.guess_you_love {
+  margin-top: 32px;
+  /* background-color: pink; */
+}
+.guess_you_love .guess_you_love_hd {
+  height: 30px;
+}
+.guess_you_love_hd .fl {
+  font-size: 18px;
+  color: #333;
+}
+.guess_you_love_hd .fr {
+  font-size: 12px;
+  color: #333;
+}
+.guess_you_love_hd .fr::after {
+  content: "\ea2e";
+  font-family: "icomoon";
+  font-size: 12px;
+  color: #333;
+  margin: 0 20px 0 10px;
+}
+.guess_you_love_bd li {
+  float: left;
+  width: 200px;
+  height: 232px;
+  border: 1px solid #ededed;
+  text-align: center;
+}
+.guess_you_love_bd li h4 {
+  font-size: 12px;
+  color: #666;
+  height: 22px;
+  line-height: 22px;
+}
+.guess_you_love_bd li p {
+  font-size: 18px;
+  color: #df3033;
+  font-weight: bold;
 }
