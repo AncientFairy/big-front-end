@@ -23,14 +23,63 @@
 .newsflash .news {
   height: 165px;
   border: 1px solid #e4e4e4;
-  background-color: red;
+  background-color: #fff;
+}
+.news .news-hd {
+  height: 33px;
+  line-height: 33px;
+  padding: 0 15px;
+  font-size: 14px;
+  border-bottom: 1px dotted #e4e4e4;
+}
+.news .news-hd .fr::after {
+  content: "\e920";
+  font-family: "icomoon";
+}
+.news .news-bd {
+  padding-top: 5px;
+  padding-left: 15px;
+}
+.news .news-bd li {
+  line-height: 24px;
+  height: 24px;
+  font-size: 12px;
+  /* 单行文本溢出显示省略号 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /* 生活服务模块 */
 .newsflash .lefeservice {
+  overflow: hidden;
   height: 209px;
   border: 1px solid #e4e4e4;
-  background-color: seagreen;
+  border-top: 0;
 }
+.lefeservice ul {
+  width: 252px;
+}
+.lefeservice li {
+  float: left;
+  width: 63px;
+  height: 70px;
+  border: 1px solid #e4e4e4;
+  border-left: 0;
+  border-top: 0;
+  text-align: center;
+  padding-top: 13px;
+}
+.lefeservice li:hover {
+    color: #c81623;
+}
+.lefeservice li i {
+  font-style: normal;
+  display: inline-block;
+  width: 24px;
+  height: 28px;
+  background: url(../images/icons.png) no-repeat -19px -15px;
+}
+
 /* 特价商品 */
 .newsflash .bargain {
   margin-top: 5px;

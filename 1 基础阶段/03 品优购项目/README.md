@@ -242,6 +242,20 @@
 
 ### 3.8.2 news新闻模块
 
+![news新闻模块](images/news新闻模块.png)
+
+* 注意：这里分为上下两个模块，但是两个模块都用div。
+* 1号盒子news-hd新闻头部模块，给一个高度和下边框。
+* 2号盒子news-bd新闻主题部分，里面包含ul和li，li里面是超链接。
+
+### 3.8.3 lifeservice生活服务模块
+
+![lifeservice生活服务模块](images/lifeservice生活服务模块.png)
+
+* lifeservice盒子宽度为250，但是装不开里面的4个li。
+* 可以让lifeservice里面的ul宽度为252，就可以装下4个小li。
+* lifeservice盒子overflow隐藏多余的部分就可以了。
+
 
 
 
