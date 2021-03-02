@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转中心点</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all 0.5s;
+            /* 设置旋转中心点，默认为50% 50% */
+            transform-origin: left bottom;
+        }
+
+        .box1:hover .box2 {
+            transform: rotate(90deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+
+</html>
