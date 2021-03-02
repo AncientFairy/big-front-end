@@ -16,13 +16,25 @@
         }
 
         div:hover {
-            transform: scale(2, 2);
+            /* 
+                transform:scale(x,y); 
+                    x和y是数字，表示倍数。1就是1倍，2就是2倍
+             */
+            /* transform: scale(2, 2); */
+            /* 宽度为原来的2倍，高度不变 */
+            /* transform: scale(2,1); */
+            /* 等比例缩放，同时修改宽度和高度，简单写法 transform: scale(2); 宽度变为2倍，高度和宽度一样*/
+            /* transform: scale(2); */
+            /* 小于1就是缩放 */
+            transform: scale(0.5);
+            /* scale不会影响其他盒子，可以设置缩放的中心点 */
         }
     </style>
 </head>
 
 <body>
     <div></div>
+    123456
 </body>
 
 </html>
