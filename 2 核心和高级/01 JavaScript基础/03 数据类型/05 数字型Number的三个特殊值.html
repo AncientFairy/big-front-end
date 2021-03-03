@@ -7,12 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>数字型Number的三个特殊值</title>
     <script>
-        var a = Infinity; //无穷大，大于任何数值
-        console.log(a);
-        var b = -Infinity; //无穷下，小于任何数值
-        console.log(b);
-        var c = NaN; //Not a Number ，代表一个非数值
-        console.log(c);
+        console.log(Number.MAX_VALUE * 2); //Infinity 无穷大，大于任何数值
+        console.log(-Number.MAX_VALUE * 2); //-Infinity 无穷下，小于任何数值
+        console.log("hello" - 1000); //NaN( Not a Number) ，代表一个非数值
     </script>
 </head>
 
