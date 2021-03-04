@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判断闰年</title>
+    <script>
+        /* 接收用户输入的年份，如果是闰年就弹出闰年，否则弹出是平年 */
+        /* 算法：能被4整除且不能整除100的为闰年（如2004年就是闰年，1901年不是闰年）或者能够被 400 整除的就是闰年 */
+        var year = prompt("请输入年份：");
+        if (parseInt(year) % 4 == 0 && parseInt(year) % 100 != 0 || parseInt(year) % 400 == 0) {
+            alert("闰年");
+        } else {
+            alert("平年");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
