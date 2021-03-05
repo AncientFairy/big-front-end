@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>什么是函数</title>
+    <script>
+        /* 函数：就是封装了一段可被重复调用执行的代码块。通过此代码块可以实现大量代码的重复使用。*/
+        function getSum(num1, num2) {
+            var sum = 0;
+            for (var x = num1; x <= num2; x++) {
+                sum += x;
+            }
+            return sum;
+        }
+
+        var result = getSum(1, 100);
+        console.log(result);
+        result = getSum(1, 1000);
+        console.log(result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
