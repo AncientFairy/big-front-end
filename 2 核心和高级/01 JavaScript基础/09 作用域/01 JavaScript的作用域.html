@@ -17,7 +17,15 @@
                 - 全局作用域：作用于整个script标签内部或者单独的js文件内部。
                 - 局部作用域。作用于函数内部。
         */
+        var num = 10;
+        console.log(num);
 
+        function fn() {
+            var num = 20;
+            console.log(num)
+        }
+
+        fn();
     </script>
 </head>
 
