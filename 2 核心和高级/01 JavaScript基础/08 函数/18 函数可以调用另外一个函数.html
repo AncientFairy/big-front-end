@@ -7,7 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>函数可以调用另外一个函数</title>
     <script>
-        
+        /* 因为每个函数都是独立的代码块，用于完成特殊任务，因此经常会用到函数相互调用的情况。 */
+        function fn1() {
+            console.log(111);
+            fn2();
+            console.log(222);
+        }
+
+        function fn2() {
+            console.log(222);
+            console.log('fn2');
+        }
+
+        fn1();
     </script>
 </head>
 
