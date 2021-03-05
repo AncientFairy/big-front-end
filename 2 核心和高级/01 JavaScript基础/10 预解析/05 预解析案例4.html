@@ -7,6 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>预解析案例4</title>
     <script>
+        f1();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+
+        function f1() {
+            var a = b = c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+
+        /*
+        * 结果：
+        * 9
+        * 9
+        * 9
+        * 9
+        * 9
+        * 报错，a is not defined
+        */
+
+        /* ----------相当于-------------*/
+        // function f1() {
+        //     // var a = b = c = 9;
+        //     //相当于var a=9;b=9;c=9;
+        //     var a;
+        //     a = 9;
+        //     b = 9;
+        //     c = 9;
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(c);
+        // }
+        //
+        // f1();
+        // console.log(c);
+        // console.log(b);
+        // console.log(a);
 
     </script>
 </head>
