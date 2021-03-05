@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return终止函数</title>
+    <script>
+        function add(num1, num2) {
+            return num1 + num2;
+            alert('我不会被执行，因为前面有 return');  //return语句之后的代码不会执行，实际开发中，不推荐
+        }
+
+        console.log(add(1, 2));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
