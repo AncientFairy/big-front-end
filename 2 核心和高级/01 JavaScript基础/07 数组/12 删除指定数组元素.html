@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除指定数组元素</title>
+    <script>
+        /* 要求：将数组[2, 0, 6, 1, 77, 0, 52, 0, 25, 7]中的 0 去掉后，形成一个不包含 0 的新数组。 */
+        /*
+        * 分析：
+        * ①需要一个新数组用于存放筛选之后的数据。
+        * ②遍历原来的数组，把不是0的数据添加到新数组里面( 此时要注意采用数组名+索引的格式接收数据)。
+        * ③新数组里面的个数，用length不断累加。
+        */
+        var arr1 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var arr2 = [];
+        for (var i = 0; i < arr1.length; i++) {
+            if (arr1[i] != 0) {
+                arr2[arr2.length] = arr1[i];
+            }
+        }
+        console.log(arr2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
