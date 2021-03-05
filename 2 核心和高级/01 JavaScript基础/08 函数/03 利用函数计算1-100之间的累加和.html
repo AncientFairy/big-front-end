@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用函数计算1-100之间的累加和</title>
+    <script>
+        /* 利用函数计算1-100之间的累加和 */
+        /* ①声明函数 */
+        function getSum() {
+            var sum = 0;
+            for (var x = 1; x <= 100; x++) {
+                sum += x;
+            }
+            return sum;
+        }
+
+        /* ②调用函数 */
+        var result = getSum();
+        console.log(result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
