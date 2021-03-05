@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通过修改length长度新增数组元素</title>
+    <script>
+        var arr = ['red', 'green', 'blue'];
+        console.log(arr.length);
+        /* 将数组的长度修改为5，那么数组里面应该有5个元素 */
+        arr.length = 5;
+        console.log(arr);
+        console.log(arr[3]); //声明变量未赋值 undefined
+        console.log(arr[4]); //声明变量未赋值 undefined
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
