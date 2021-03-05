@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预解析</title>
+    <script>
+        //1. 问
+        // console.log(num); //num is not defined
+
+        //2. 问
+        /*
+            console.log(num); //undefined
+            var num = 10;
+
+            --------相当于--------
+            var num;
+            console.log(num);
+            num = 10;
+        */
+
+
+        //3. 问
+        /*
+            fn();
+            function fn(){
+                console.log('打印'); //打印
+            }
+
+            ---------相当于-----------
+            function fn(){
+                console.log('打印'); //打印
+            }
+            fn();
+        */
+
+        //4. 问
+        /*
+            fn();
+            var fn = function (){
+                console.log('打印'); //fn is not a function
+            }
+
+             --------相当于--------
+             var fn ;
+             fn();
+             fn = function (){
+                console.log('打印');
+            }
+        */
+
+        /*
+            js引擎在运行js分为两步：预解析和代码执行。
+                - 预解析： js会把js里面所有的var还有function提升到当前作用域的最前面。
+                - 代码执行：按照代码书写的顺序从上往下执行。
+
+            预解析分为变量预解析（变量提升）和函数预解析（函数提升）。
+                - 变量提升：就是把所有的变量声明提升到当前作用域的前面，不提升赋值操作。
+                - 函数提升：函数的声明会被提升到当前作用域的最上面，但是不会调用函数。
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
