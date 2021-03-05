@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻转数组</title>
+    <script>
+        /*
+        * 要求: 将数组 ['red', 'green', 'blue', 'pink', 'purple'] 的内容反过来存放。
+        * 输出： ['purple', 'pink', 'blue', 'green', 'red']
+        */
+        var arr1 = ['red', 'green', 'blue', 'pink', 'purple'];
+        var arr2 = [];
+        for (var i = 0; i < arr1.length; i++) {
+            arr2[arr2.length] = arr1[arr1.length - 1 - i];
+        }
+        console.log(arr2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
