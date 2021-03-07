@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象案例1</title>
+    <script>
+        /*
+        * 请用对象字面量的形式创建一个名字为可可的狗对象。
+        * 具体信息如下：
+        * 姓名：可可
+        * 类型(type)：阿拉斯加犬
+        * 年龄：5岁，
+        * 颜色：棕红色。
+        * 技能：汪汪汪(bark) ，演电影 (showFilm)
+        */
+        var dog = {
+            name: '可可',
+            type: '阿拉斯加犬',
+            age: 5,
+            color: '棕红色',
+            bark: function () {
+                console.log('汪汪汪');
+            },
+            showFilm: function () {
+                console.log('演电影');
+            }
+        }
+
+        console.log(dog.name);
+        console.log(dog.type);
+        console.log(dog.age);
+        console.log(dog.color);
+        dog.bark();
+        dog.showFilm();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
