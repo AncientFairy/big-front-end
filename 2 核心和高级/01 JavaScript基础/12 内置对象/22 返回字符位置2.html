@@ -22,9 +22,17 @@
                 obj[str.charAt(x)]++;
             }
         }
+        var max = 0;
+        var ch = '';
         for (var k in obj) {
-            console.log(k + '\t' + obj[k]);
+            if (max < obj[k]) {
+                max = obj[k];
+                ch = k;
+            }
         }
+        console.log(max);
+        console.log(ch);
+
     </script>
 </head>
 
