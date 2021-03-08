@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组去重</title>
+    <script>
+        /* 有一个数组['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b']，要求去除数组中重复的元素。 */
+        /* 我们遍历旧数组，然后拿着旧数组元素去查询新数组，如果该元素在新数组里面没有出现过，我们就添加，否则不添加。 */
+        /* 我们怎么知道该元素没有存在？  利用 新数组.indexOf(数组元素)  如果返回时 -1 就说明 新数组里面没有改元素。 */
+        var arr = ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b'];
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (-1 == newArr.indexOf(arr[i])) {
+                newArr.push(arr[i]);
+            }
+        }
+        console.log(newArr); //["c", "a", "z", "x", "b"]
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
