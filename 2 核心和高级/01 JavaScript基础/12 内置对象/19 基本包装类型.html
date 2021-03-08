@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本包装类型</title>
+    <script>
+        var str = 'andy';
+        console.log(str.length);
+        //对象才有属性和方法。
+        //简单数据类型为什么会有length属性呢？
+
+        //基本包装类型：就是将简单数据类型包装成复杂数据类型。类似于Java中的装箱和拆箱
+        //执行过程如下:
+        //①将简单数据类型包装成复杂数据类型
+        var temp = new String('andy');
+        //②将临时变量的值赋值给str
+        str = temp;
+        //③销毁临时变量
+        temp = null;
+        console.log(str.length);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
