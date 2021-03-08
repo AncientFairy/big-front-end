@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>返回字符位置2</title>
+    <script>
+        /* 判断一个字符串 'abcoefoxyozzopp' 中出现次数最多的字符，并统计其次数。 */
+        /* 核心算法：利用 charAt(） 遍历这个字符串
+        * 把每个字符都存储给对象， 如果对象没有该属性，就为1，如果存在了就 +1
+        * 遍历对象，得到最大值和该字符
+        */
+        var str = 'abcoefoxyozzopp';
+        var obj = {};  //原理：obj.a = 1
+        for (var x = 0; x < str.length; x++) {
+            //如果不存在该属性
+            if (!obj[str.charAt(x)]) {
+                obj[str.charAt(x)] = 1;
+            } else {
+                obj[str.charAt(x)]++;
+            }
+        }
+        for (var k in obj) {
+            console.log(k + '\t' + obj[k]);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
