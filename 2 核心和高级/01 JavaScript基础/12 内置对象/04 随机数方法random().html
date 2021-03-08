@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机数方法random()</title>
+    <script>
+        /*
+           Math.random(); 返回一个随机的小数, [0,1)
+        */
+        var num = Math.random();
+
+        /* 得到一个两数之间的随机整数，包含两个数在内 */
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        console.log(getRandom(1, 10));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
