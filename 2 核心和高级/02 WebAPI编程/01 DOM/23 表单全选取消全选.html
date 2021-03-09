@@ -99,18 +99,15 @@
         //下面复选框全部选中
         for (var i = 0; i < checkboxs.length; i++) {
             checkboxs[i].onclick = function () {
-                var checkNum = 0;
                 //每次点击下面的复选框都要循环检查4个小按钮是否选中
+                var flag = true; //控制全选按钮是否选中
                 for (var j = 0; j < checkboxs.length; j++) {
-                    if (checkboxs[j].checked) {
-                        checkNum++;
+                    //某一个按钮没有被选中，就将全选取消
+                    if (!checkboxs[j].checked) {
+                        flag = false;
                     }
                 }
-                if (checkNum == checkboxs.length) {
-                    checkAll.checked = true;
-                } else {
-                    checkAll.checked = false;
-                }
+                checkAll.checked = flag;
             }
         }
 
