@@ -24,10 +24,10 @@
         var hours = date.getHours();
         var img = document.querySelector('img');
         var div = document.querySelector('div');
-        if (hours >= 6 && hours < 12) { //上午
+        if (hours < 12) { //上午
             img.src = 'images/z.gif';
             div.innerHTML = '上午好';
-        } else if (hours >= 12 && hours <= 18) { //下午
+        } else if (hours <= 18) { //下午
             img.src = 'images/x.gif';
             div.innerHTML = '下午好';
         } else { //晚上
