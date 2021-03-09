@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示隐藏文本框内容</title>
+    <style>
+        input {
+            display: block;
+            width: 320px;
+            height: 25px;
+            outline: none;
+            margin: 100px auto;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="手机">
+    <script>
+        /* 当鼠标点击文本框时，里面的默认文字隐藏，当鼠标离开文本框时，里面的文字显示。 */
+        /* 首先表单需要2个新事件，获得焦点 onfocus  失去焦点 onblur
+        * 如果获得焦点，判断表单里面内容是否为默认文字，如果是默认文字，就清空表单内容
+        * 如果失去焦点，判断表单内容是否为空，如果为空，则表单内容改为默认文字
+        */
+        var input = document.querySelector('input');
+        input.onfocus = function () {
+            if (this.value == '手机') {
+                this.value = '';
+            }
+        }
+        input.onblur = function () {
+            if (this.value == '') {
+                this.value = '手机';
+            }
+        }
+    </script>
+</body>
+
+</html>
