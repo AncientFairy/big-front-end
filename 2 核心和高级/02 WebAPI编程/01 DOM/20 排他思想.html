@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排他思想</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+
+    <script>
+        /*
+        * 如果有同一组元素，我们想要某一个元素实现某种样式， 需要用到循环的排他思想算法：
+        * 1. 所有元素全部清除样式（干掉其他人）
+        * 2. 给当前元素设置样式 （留下我自己）
+        * 3. 注意顺序不能颠倒，首先干掉其他人，再设置自己
+        */
+        var btns = document.querySelectorAll('button');
+        for (var i = 0; i < btns.length; i++) {
+            var btn = btns[i];
+            btn.onmouseover = function () {
+                //先将所有元素全部清除样式
+                for (var j = 0; j < btns.length; j++) {
+                    btns[j].style.backgroundColor = '';
+                }
+                //给当前元素设置样式
+                this.style.backgroundColor = 'pink';
+            }
+        }
+    </script>
+</body>
+
+</html>
