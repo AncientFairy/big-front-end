@@ -9,7 +9,26 @@
 </head>
 
 <body>
-
+    <ul>
+        <li>知否知否，应是绿肥红瘦1</li>
+        <li>知否知否，应是绿肥红瘦2</li>
+        <li>知否知否，应是绿肥红瘦3</li>
+        <li>知否知否，应是绿肥红瘦4</li>
+        <li>知否知否，应是绿肥红瘦5</li>
+    </ul>
+    <ol>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ol>
+    <script>
+        var ol = document.getElementsByTagName('ol')[0];
+        // 获取某个父元素内部的所有指定标签名的子元素
+        var li = ol.getElementsByTagName('li');
+        for (var i = 0; i < li.length; i++) {
+            console.log(li[i]);
+        }
+    </script>
 </body>
 
 </html>
