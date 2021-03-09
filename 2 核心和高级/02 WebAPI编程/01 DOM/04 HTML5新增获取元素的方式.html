@@ -9,9 +9,30 @@
 </head>
 
 <body>
-
+    <div class="box">盒子</div>
+    <div class="box">盒子</div>
+    <div class="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
     <script>
-
+        //根据类名返回元素对象集合。
+        var boxArray = document.getElementsByClassName('box');
+        for (var i = 0; i < boxArray.length; i++) {
+            console.log(boxArray[i]);
+        }
+        console.log('-----------------------------');
+        //根据指定选择器返回第一个元素对象：
+        var liFirst = document.querySelector('.nav ul li');
+        console.log(liFirst);
+        console.log('-----------------------------');
+        //根据指定选择器返回所有的元素对象：
+        var lis = document.querySelectorAll('.nav ul li');
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
     </script>
 </body>
 
