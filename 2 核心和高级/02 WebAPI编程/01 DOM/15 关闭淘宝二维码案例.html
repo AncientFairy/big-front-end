@@ -33,7 +33,7 @@
         /* 核心思路：  利用样式的显示和隐藏完成， display:none 隐藏元素 display:block 显示元素   */
         /* 点击按钮，就让这个二维码盒子隐藏起来即可 */
         var close = document.querySelector('.close');
-        var img = document.querySelector('img');
+        var img = document.querySelector('.box');
         close.onclick = function () {
             img.style.display = 'none';
         }
