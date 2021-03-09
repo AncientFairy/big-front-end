@@ -21,8 +21,13 @@
         var btn = document.querySelector('#btn');
         //按钮点击
         btn.onclick = function () {
-            passwordInput.type = 'text';
-            flag = true;
+            if (flag == 1) {
+                passwordInput.type = 'text';
+                flag = 0;
+            } else {
+                passwordInput.type = 'password';
+                flag = 1;
+            }
         }
 
     </script>
