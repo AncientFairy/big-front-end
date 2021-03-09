@@ -18,16 +18,22 @@
     <button id="zxy">张学友</button>
     <br>
     <br>
-    <img src="images/ldh.jpg" alt="">
+    <img src="images/ldh.jpg" alt="刘德华" title="刘德华">
     <script>
+        //1.获取元素
         var ldhBtn = document.querySelector('#ldh');
         var zxyBtn = document.querySelector('#zxy');
         var img = document.querySelector('img');
+        //2.注册事件 处理程序
         ldhBtn.onclick = function () {
             img.src = 'images/ldh.jpg';
+            img.title = '刘德华';
+            img.alt = '刘德华';
         }
         zxyBtn.onclick = function () {
             img.src = 'images/zxy.jpg';
+            img.title = '张学友';
+            img.alt = '张学友';
         }
     </script>
 </body>
