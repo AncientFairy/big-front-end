@@ -60,7 +60,7 @@
         * 当我们点击了这个图片，让我们页面背景改为当前的图片
         * 核心算法：把当前图片的src 路径取过来，给 body 做为背景即可
         */
-        var imgs = document.querySelectorAll('img');
+        var imgs = document.querySelectorAll('ul li img');
         var body = document.querySelector('body');
         for (var i = 0; i < imgs.length; i++) {
             var img = imgs[i];
