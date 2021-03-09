@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分时问候并显示不同图片案例</title>
+</head>
+
+<body>
+
+    <img src="" alt="">
+    <div></div>
+
+    <script>
+        /*
+        * 根据不同时间，页面显示不同图片，同时显示不同的问候语。
+        * 如果上午时间打开页面，显示上午好，显示上午的图片。
+        * 如果下午时间打开页面，显示下午好，显示下午的图片。
+        * 如果晚上时间打开页面，显示晚上好，显示晚上的图片。
+        */
+        var date = new Date();
+        var hours = date.getHours();
+        var img = document.querySelector('img');
+        var div = document.querySelector('div');
+        if (hours >= 6 && hours < 12) { //上午
+            img.src = 'images/z.gif';
+            div.innerHTML = '上午好';
+        } else if (hours >= 12 && hours <= 18) { //下午
+            img.src = 'images/x.gif';
+            div.innerHTML = '下午好';
+        } else { //晚上
+            img.src = 'images/w.gif';
+            div.innerHTML = '晚上好';
+        }
+    </script>
+</body>
+
+</html>
