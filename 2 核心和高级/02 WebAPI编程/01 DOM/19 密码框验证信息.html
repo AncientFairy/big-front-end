@@ -53,7 +53,7 @@
         var message = document.querySelector('.message');
         pwd.onblur = function () {
             if (this.value == '' || this.value.length < 6 || this.value.length > 16) {
-                message.innerHTML = '您输入的位数不对要求6~16位';
+                message.innerHTML = '您输入的位数不对，要求6~16位';
                 message.className = 'message wrong';
             } else {
                 message.innerHTML = '您输入的正确';
