@@ -31,6 +31,10 @@
             font-size: 12px;
             color: blue;
         }
+
+        .bg {
+            background-color: pink;
+        }
     </style>
 </head>
 
@@ -100,18 +104,18 @@
 
     <script>
         /*
-        * 用到新的鼠标事件 鼠标经过 onmouseover   鼠标离开 onmouseout
-        * 核心思路：鼠标经过 tr 行，当前的行变背景颜色， 鼠标离开去掉当前的背景颜色
-        * 注意： 第一行（thead里面的行）不需要变换颜色，因此我们获取的是 tbody 里面的行
+        * 用到新的鼠标事件 鼠标经过 onmouseover 鼠标离开 onmouseout
+        * 核心思路：鼠标经过tr行，当前的行变背景颜色，鼠标离开去掉当前的背景颜色。
+        * 注意： 第一行（thead里面的行）不需要变换颜色，因此我们获取的是tbody里面的行。
         */
-        var tbodyTr = document.querySelectorAll('tbody tr');
-        for (var i = 0; i < tbodyTr.length; i++) {
-            var tr = tbodyTr[i];
+        var trs = document.querySelectorAll('tbody tr');
+        for (var i = 0; i < trs.length; i++) {
+            var tr = trs[i];
             tr.onmouseover = function () {
-                this.style.backgroundColor = 'pink';
+                this.className = 'bg';
             }
             tr.onmouseout = function () {
-                this.style.backgroundColor = '';
+                this.className = '';
             }
         }
     </script>
