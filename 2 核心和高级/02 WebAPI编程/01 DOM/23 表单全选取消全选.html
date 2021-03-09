@@ -105,6 +105,7 @@
                     //某一个按钮没有被选中，就将全选取消
                     if (!checkboxs[j].checked) {
                         flag = false;
+                        break;
                     }
                 }
                 checkAll.checked = flag;
