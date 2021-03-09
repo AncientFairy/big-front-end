@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单全选取消全选</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 800px;
+            margin: 100px auto;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        tr {
+            height: 30px;
+            font-size: 16px;
+        }
+
+        td {
+            border: 1px solid #999;
+        }
+
+        thead tr {
+            background-color: skyblue;
+        }
+
+        tbody tr {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" name="" id="checkAll">
+                </th>
+                <th>商品</th>
+                <th>价格</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>iPhone8</td>
+                <td>8000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>iPad Pro</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>iPad Air</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name=""></td>
+                <td>Apple Watch</td>
+                <td>2000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        /*
+        * 点击上面全选复选框，下面所有的复选框都选中（全选）
+        * 再次点击全选复选框，下面所有的复选框都不中选（取消全选）
+        * 如果下面复选框全部选中，上面全选按钮就自动选中
+        * 如果下面复选框有一个没有选中，上面全选按钮就不选中
+        * 所有复选框一开始默认都没选中状态
+        */
+        /*
+        * 全选和取消全选做法：让下面所有复选框的checked属性（选中状态） 跟随 全选按钮即可
+        * 下面复选框需要全部选中， 上面全选才能选中做法： 给下面所有复选框绑定点击事件，每次点击，都要循环查看下面所有的复选框是否有没选中的，如果有一个没选中的， 上面全选就不选中。
+        * 可以设置一个变量，来控制全选是否选中
+        */
+        //获取全选元素
+        var checkAll = document.querySelector('#checkAll');
+        //获取所有的复选框
+        var checkboxs = document.querySelectorAll("tbody tr td input[type='checkbox']");
+        //全选元素选中或取消
+        checkAll.onclick = function () {
+            for (var i = 0; i < checkboxs.length; i++) {
+                checkboxs[i].checked = this.checked;
+            }
+        }
+        //下面复选框全部选中
+        for (var i = 0; i < checkboxs.length; i++) {
+            checkboxs[i].onclick = function () {
+                var checkNum = 0;
+                //每次点击下面的复选框都要循环检查4个小按钮是否选中
+                for (var j = 0; j < checkboxs.length; j++) {
+                    if (checkboxs[j].checked) {
+                        checkNum++;
+                    }
+                }
+                if (checkNum == checkboxs.length) {
+                    checkAll.checked = true;
+                } else {
+                    checkAll.checked = false;
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
