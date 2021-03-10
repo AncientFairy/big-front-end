@@ -38,8 +38,9 @@
     <script>
         var btn = document.querySelector('button');
         var ul = document.querySelector('ul');
+        var textarea = document.querySelector('textarea');
         btn.onclick = function () {
-            var textareaValue = document.querySelector('textarea').value;
+            var textareaValue = textarea.value;
             var li = document.createElement('li');
             var liContent = document.createTextNode(textareaValue);
             li.appendChild(liContent);
