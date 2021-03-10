@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单版发布留言案例</title>
+    <style>
+        textarea {
+            outline: none;
+            width: 300px;
+            height: 200px;
+            vertical-align:middle
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id=""></textarea>
+    <button>发布</button>
+    <ul></ul>
+    <script>
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+        btn.onclick = function () {
+            var textareaValue = document.querySelector('textarea').value;
+            var li = document.createElement('li');
+            var liContent = document.createTextNode(textareaValue);
+            li.appendChild(liContent);
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+
+</html>
