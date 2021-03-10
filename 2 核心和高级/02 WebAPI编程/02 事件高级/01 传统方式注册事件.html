@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传统方式注册事件</title>
+</head>
+
+<body>
+    <button>传统方式注册事件</button>
+
+    <script>
+        var btn = document.querySelector('button');
+        btn.onclick = function () {
+            alert('~~hi~~');
+        }
+
+        //注册事件的唯一性，同一个元素同一个事件只能设置一个处理函数，最后注册的处理函数将会覆盖前面注册的处理函数。
+        btn.onclick = function () {
+            alert('~~你好啊~~');
+        }
+    </script>
+</body>
+
+</html>
