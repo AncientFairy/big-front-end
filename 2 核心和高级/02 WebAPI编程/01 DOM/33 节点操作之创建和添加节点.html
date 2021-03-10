@@ -16,8 +16,11 @@
         var ul = document.querySelector('ul');
         //创建元素节点
         var li = document.createElement('li');
-        //添加节点：追加元素，类似于数组中的push
+        //添加节点：node.appendChild(child) node表示父级，child表示子级 追加元素，类似于数组中的push
         ul.appendChild(li);
+        //添加节点，insertBefore(child,指定元素)
+        var lili = document.createElement('li');
+        ul.insertBefore(lili, ul.children[0]);
     </script>
 </body>
 
