@@ -13,6 +13,7 @@
     <script>
         var btn = document.querySelector('button');
         //addEventListener里面的事件类型是字符串，必须键引号，而且不带on
+        //同一个元素，同一个事件可以添加多个监听器
         btn.addEventListener('click', function () {
             alert('~你好啊~');
         });
