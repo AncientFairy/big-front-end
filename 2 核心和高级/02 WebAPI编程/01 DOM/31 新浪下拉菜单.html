@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新浪下拉菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .nav {
+            width: 800px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+
+        .nav > li {
+            position: relative;
+            width: 80px;
+            height: 41px;
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            font-size: 16px;
+            width: 100%;
+            height: 100%;
+            line-height: 41px;
+            text-align: center;
+            color: #333;
+        }
+
+        .nav > li > a:hover {
+            background-color: #eee;
+        }
+
+        .nav ul {
+            display: none;
+            position: absolute;
+            top: 41px;
+            left: 0;
+            width: 100%;
+            border: 1px solid #FECC5B;
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .nav ul li {
+            border-bottom: 1px solid #FECC5B;
+        }
+
+        .nav ul li a:hover {
+            background-color: #FFF5DA;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li><a href="#">私信</a></li>
+                <li><a href="#">评论</a></li>
+                <li><a href="#">@我</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博2</a>
+            <ul>
+                <li><a href="#">私信2</a></li>
+                <li><a href="#">评论2</a></li>
+                <li><a href="#">@我2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博3</a>
+            <ul>
+                <li><a href="#">私信3</a></li>
+                <li><a href="#">评论3</a></li>
+                <li><a href="#">@我3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博4</a>
+            <ul>
+                <li><a href="#">私信4</a></li>
+                <li><a href="#">评论4</a></li>
+                <li><a href="#">@我4</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        /*
+        * 导航栏里面的li 都要有鼠标经过效果，所以需要循环注册鼠标事件
+        * 核心原理： 当鼠标经过li里面的第二个孩子ul显示，当鼠标离开,则ul 隐藏
+        */
+        var nav = document.querySelector('.nav');
+        var lis = nav.children;
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function () {
+                var ul = this.children[this.children.length - 1];
+                ul.style.display = 'block';
+            }
+            lis[i].onmouseout = function () {
+                var ul = this.children[this.children.length - 1];
+                ul.style.display = 'none';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
