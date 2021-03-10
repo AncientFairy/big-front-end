@@ -45,7 +45,7 @@
                 var li = document.createElement('li');
                 var liContent = document.createTextNode(textareaValue);
                 li.appendChild(liContent);
-                ul.appendChild(li);
+                ul.insertBefore(li, ul.children[0]);
             }
         }
     </script>
