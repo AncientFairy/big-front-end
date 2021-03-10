@@ -12,6 +12,7 @@
     <button>方法监听方式注册事件</button>
     <script>
         var btn = document.querySelector('button');
+        //addEventListener里面的事件类型是字符串，必须键引号，而且不带on
         btn.addEventListener('click', function () {
             alert('~你好啊~');
         });
