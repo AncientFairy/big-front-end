@@ -25,7 +25,22 @@
     </div>
 
     <script>
-
+        //获取子节点
+        //1. parentNode.childNodes，不提倡使用，太麻烦
+        var demo = document.querySelector('.demo');
+        var childNodes = demo.childNodes;
+        for (var i = 0; i < childNodes.length; i++) {
+            var childNode = childNodes[i];
+            //如果是元素节点
+            if (childNode.nodeType == 1) {
+                console.log(childNode);
+            }
+        }
+        //2. parentNode.children 提倡使用
+        var children = demo.children;
+        for (var i = 0; i < children.length; i++) {
+            console.log(children[i]);
+        }
     </script>
 </body>
 
