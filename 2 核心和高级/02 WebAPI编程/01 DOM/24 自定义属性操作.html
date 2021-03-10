@@ -33,6 +33,11 @@
         console.log(div.getAttribute('index'));
         div.setAttribute('class', 'footer'); //class特殊，这里写的是class，而不是className
         console.log(div.getAttribute('class'));
+
+        //3.移除属性
+        // element.removeAttribute('属性');
+        div.removeAttribute('index');
+        console.log(div.getAttribute('index')); //null
     </script>
 </body>
 
