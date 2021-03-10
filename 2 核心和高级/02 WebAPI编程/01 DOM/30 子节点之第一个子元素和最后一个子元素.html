@@ -26,6 +26,12 @@
         console.log(ol.firstElementChild);
         //lastElementChild 返回的是最后一个子元素节点，IE9+才支持
         console.log(ol.lastElementChild);
+        /*
+        * 实际开发中，firstChild和lastChild包含其他节点，操作不方便；而firstElementChild和lastElementChild又有兼容性问题，那么我们如何获取第一个子元素节点或者最后一个子元素节点呢？
+        * 解决方案：
+        *  - 如果想要第一个子元素节点，可以使用parentNode.children[0];
+        *  - 如果想要最后一个子元素节点，可以使用parentNode.children[parentNode.children.length-1];
+        */
     </script>
 </body>
 
