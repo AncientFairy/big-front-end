@@ -91,7 +91,7 @@
         var items = document.querySelectorAll('.item');
         for (var i = 0; i < tab_list_lis.length; i++) {
             ////给上面的tab_list 里面的所有小li 添加自定义属性，属性值从0开始编号
-            tab_list_lis[i].setAttribute('index', i);
+            tab_list_lis[i].setAttribute('data-index', i);
             tab_list_lis[i].onclick = function () {
                 // 上的模块选项卡，点击某一个，当前这一个底色会是红色，其余不变（排他思想） 修改类名的方式
                 for (var j = 0; j < tab_list_lis.length; j++) {
@@ -99,7 +99,7 @@
                 }
                 this.className = 'current';
                 //下面的模块内容，会跟随上面的选项卡变化。所以下面模块变化写到点击事件里面。
-                var index = this.getAttribute('index');
+                var index = this.getAttribute('data-index');
                 for (var j = 0; j < items.length; j++) {
                     items[j].style.display = 'none';
                 }
