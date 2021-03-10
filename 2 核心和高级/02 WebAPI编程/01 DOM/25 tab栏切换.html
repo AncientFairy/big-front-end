@@ -88,6 +88,7 @@
         * 当我们点击tab_list 里面的某个小li，让tab_con 里面对应序号的 内容显示，其余隐藏（排他思想）
         */
         var tab_list_lis = document.querySelectorAll('.tab .tab_list ul li');
+        var items = document.querySelectorAll('.item');
         for (var i = 0; i < tab_list_lis.length; i++) {
             ////给上面的tab_list 里面的所有小li 添加自定义属性，属性值从0开始编号
             tab_list_lis[i].setAttribute('index', i);
@@ -99,17 +100,10 @@
                 this.className = 'current';
                 //下面的模块内容，会跟随上面的选项卡变化。所以下面模块变化写到点击事件里面。
                 var index = this.getAttribute('index');
-                var items = document.querySelectorAll('.item');
                 for (var j = 0; j < items.length; j++) {
-                    if (j == index) {
-                        //其余隐藏，自己显示
-                        for (var k = 0; k < items.length; k++) {
-                            items[k].style.display = 'none';
-                        }
-                        items[j].style.display = 'block';
-                        break;
-                    }
+                    items[j].style.display = 'none';
                 }
+                items[index].style.display = 'block';
             }
         }
 
