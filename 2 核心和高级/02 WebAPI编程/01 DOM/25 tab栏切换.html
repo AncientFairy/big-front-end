@@ -98,9 +98,9 @@
                 }
                 this.className = 'current';
                 //下面的模块内容，会跟随上面的选项卡变化。所以下面模块变化写到点击事件里面。
+                var index = this.getAttribute('index');
                 var items = document.querySelectorAll('.item');
                 for (var j = 0; j < items.length; j++) {
-                    var index = this.getAttribute('index');
                     if (j == index) {
                         //其余隐藏，自己显示
                         for (var k = 0; k < items.length; k++) {
