@@ -41,10 +41,12 @@
         var textarea = document.querySelector('textarea');
         btn.onclick = function () {
             var textareaValue = textarea.value;
-            var li = document.createElement('li');
-            var liContent = document.createTextNode(textareaValue);
-            li.appendChild(liContent);
-            ul.appendChild(li);
+            if (textareaValue) {
+                var li = document.createElement('li');
+                var liContent = document.createTextNode(textareaValue);
+                li.appendChild(liContent);
+                ul.appendChild(li);
+            }
         }
     </script>
 </body>
