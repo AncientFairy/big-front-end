@@ -38,6 +38,16 @@
             //阻止默认行为（事件）
             event.preventDefault();
         });
+
+        //3. 传统注册方式
+        a.onclick = function (event) {
+            //普通浏览器
+            // event.preventDefault();
+            //低版本浏览器 IE6 7 8
+            // event.returnValue;
+            //我们也可以使用return false阻止默认行为，没有兼容性问题，特点 后面的代码不执行
+            return false;
+        }
     </script>
 </body>
 
