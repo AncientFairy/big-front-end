@@ -44,6 +44,8 @@
         var father = document.querySelector('.father');
         father.addEventListener('click', function (event) {
             alert('father');
+            //阻止事件冒泡
+            event.stopPropagation();
         })
 
         var document = document.querySelector('document');
