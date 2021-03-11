@@ -14,12 +14,12 @@
         // keyup和keydown不区分字母大小写，a和A都是65
         document.addEventListener('keyup', function (event) {
             console.log(event);
-            console.log(event.keyCode);
+            console.log('keyup:' + event.keyCode);
         });
         // keypress区分字母大小写，A65 a 97
         document.addEventListener('keypress', function (event) {
             console.log(event);
-            console.log(event.keyCode);
+            console.log('keypress:' + event.keyCode);
         });
     </script>
 </body>
