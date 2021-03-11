@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阻止事件冒泡</title>
+    <style>
+        .father {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 200px auto;
+        }
+
+        .son {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">儿子</div>
+    </div>
+
+    <script>
+        //阻止冒泡 DOM推荐 stopPropagation()
+        var son = document.querySelector('.son');
+        son.addEventListener('click', function (event) {
+            alert('son');
+            //阻止事件冒泡
+            event.stopPropagation();
+        });
+
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function (event) {
+            alert('father');
+        })
+
+        var document = document.querySelector('document');
+        document.addEventListener('click', function (event) {
+            alert('document');
+        })
+
+    </script>
+</body>
+
+</html>
