@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval()定时器</title>
+    <script>
+        /*
+        * window.setInterval(回调函数,[间隔的毫秒数]);\
+        *
+        * - window 可以省略。
+        * - 这个调用函数可以直接写函数，或者写函数名或者采取字符串 '函数名()'  三种形式，第三种方式不推荐。
+        * - 间隔的毫秒数省略默认是 0，如果写，必须是毫秒，表示每隔多少毫秒就自动调用这个函数。
+        * - 因为定时器可能有很多，所以我们经常给定时器赋值一个标识符。
+        * - 第一次执行也是间隔毫秒数之后执行，之后每隔毫秒数就执行一次。
+        */
+        window.addEventListener('load', function () {
+            var timer = window.setInterval(function () {
+                alert('爆炸了...')
+            }, 5000);
+
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
