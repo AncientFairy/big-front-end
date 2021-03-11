@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            position: relative;
+            width: 190px;
+            height: 280px;
+            background-color: #e83632;
+            margin: 100px auto;
+        }
+
+        .hour {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+        }
+
+        .minute {
+            position: absolute;
+            bottom: 20px;
+            left: 75px;
+        }
+
+        .second {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+        }
+
+        span {
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            background-color: #2f3430;
+        }
+    </style>
+    <script>
+        /*
+        * 这个倒计时是不断变化的，因此需要定时器来自动变化（setInterval）
+        * 三个黑色盒子里面分别存放时分秒
+        * 三个黑色盒子利用innerHTML 放入计算的小时分钟秒数
+        * 第一次执行也是间隔毫秒数，因此刚刷新页面会有空白
+        * 最好采取封装函数的方式，这样可以先调用一次这个函数，防止刚开始刷新页面有空白问题
+        */
+        window.addEventListener('load', function () {
+            var future = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 1);
+
+            var hour = document.querySelector('.hour');
+            var minute = document.querySelector('.minute');
+            var second = document.querySelector('.second');
+
+            function countDown(time) {
+                var timeArr = [];
+
+                var nowTime = +new Date(); //返回的是当前总的毫秒数
+                var inputTime = +new Date(time); //返回的是用户输入时间总的毫秒数
+                var times = (inputTime - nowTime) / 1000; //剩余时间总的秒数
+                var h = parseInt(times / 60 / 60 % 24); //计算小时
+                h = h < 10 ? '0' + h : h + '';
+                var m = parseInt(times / 60 % 60);//计算分数
+                m = m < 10 ? '0' + m : m + '';
+                var s = parseInt(times % 60); //计算当前秒数
+                s = s < 10 ? '0' + s : s + '';
+
+                timeArr.push(h);
+                timeArr.push(m);
+                timeArr.push(s);
+
+                return timeArr;
+            }
+
+            //最好采取封装函数的方式，这样可以先调用一次这个函数，防止刚开始刷新页面有空白问题
+            function fullInData() {
+                hour.innerHTML = countDown(future)[0];
+                minute.innerHTML = countDown(future)[1];
+                second.innerHTML = countDown(future)[2];
+            }
+
+            fullInData();
+
+            window.setInterval(fullInData, 1000);
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <span class="hour"></span>
+        <span class="minute"></span>
+        <span class="second"></span>
+    </div>
+</body>
+
+</html>
