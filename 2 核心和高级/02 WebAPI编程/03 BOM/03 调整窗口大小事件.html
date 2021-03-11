@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调整窗口大小事件</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            var div = document.querySelector('div');
+            // 调整窗口大小事件
+            // ①只要窗口大小发生像素变化，就会触发该事件。
+            // ②我们经常利用这个时间完成响应式布局，window.innerWidth当前屏幕的宽度。
+            window.addEventListener('resize', function (event) {
+                var width = window.innerWidth;
+                if (width <= 800) {
+                    div.style.display = 'none';
+                } else {
+                    div.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
