@@ -51,7 +51,7 @@
             var btn = document.querySelector('button');
             btn.addEventListener('click', function () {
                 //按钮点击之后，会禁用disabled为true
-                btn.disabled = true;
+                this.disabled = true;
                 var num = 3;
                 var timer = window.setInterval(function () {
                     if (num == 0) {
