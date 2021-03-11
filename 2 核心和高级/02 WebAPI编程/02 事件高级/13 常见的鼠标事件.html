@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见的鼠标事件</title>
+</head>
+
+<body>
+    <div>我是一段不愿意分享的文字</div>
+
+    <script>
+        //禁用 右键菜单
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+        });
+        //禁用 鼠标选中  selectstart 开始选中，就禁止。
+        document.addEventListener('selectstart', function (event) {
+            event.preventDefault();
+        })
+    </script>
+</body>
+
+</html>
