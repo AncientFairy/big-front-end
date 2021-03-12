@@ -11,10 +11,10 @@
             //this 指向问题 一般情况下this的最终指向是谁调用指向谁
 
             //1. 全局作用域或者普通函数中的this指向全局对象window（注意定时器中的this指向window）
-            console.log(this);//windows
+            console.log(this);//window
 
             function fn() {
-                console.log(this);//windows
+                console.log(this);//window
             }
 
             fn(); //相当于window.fn();
