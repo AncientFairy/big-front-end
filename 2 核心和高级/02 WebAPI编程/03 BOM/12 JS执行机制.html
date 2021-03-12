@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS执行机制</title>
+</head>
+
+<body>
+    <script>
+        console.log(1);
+        document.onclick = function () {
+            console.log('click');
+        }
+        console.log(2);
+        setTimeout(function () {
+            console.log(3)
+        }, 3000);
+        //由于主线程不断的重复获取任务、执行任务、再获取任务、再执行，这种机制被称为事件循环。
+    </script>
+</body>
+
+</html>
