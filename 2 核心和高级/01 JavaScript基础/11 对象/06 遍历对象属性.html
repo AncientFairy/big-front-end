@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>遍历对象属性</title>
     <script>
-        function Hero(name,type,blood,attack){
+        function Hero(name, type, blood, attack) {
             this.name = name;
             this.type = type;
             this.blood = blood;
             this.attack = attack;
         }
 
-        var hero1 = new Hero('廉颇','力量型','500血量','近战');
+        var hero1 = new Hero('廉颇', '力量型', '500血量', '近战');
 
-        for(var key in hero1){
+        for (var key in hero1) {
             console.log(key); //属性名
             console.log(hero1[key]) //属性值
         }

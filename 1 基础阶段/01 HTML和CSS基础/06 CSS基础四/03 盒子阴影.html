@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>盒子阴影</title>
     <style>
-      /* box-shadow: h-shadow v-shadow blur spread color inset; */
-      /* 
-        h-shadow 水平方向的阴影的位置
-        v-shadow 垂直方向的阴影的位置
-        blur 模糊距离，影子虚实程度，0就相当于实，类似于克隆了一份，数值越大，影子越模糊
-        spread 阴影的尺寸，阴影的大小
-        color 阴影的颜色
-        inset 内部阴影，如果不写，则为外部阴影
-       */
-      div {
-        width: 200px;
-        height: 200px;
-        background-color: pink;
-        margin: 100px auto;
-        /* 盒子阴影 */
-        /* box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.3); */
-      }
-      /* 鼠标经过，出现阴影 */
-      div:hover {
-        box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.3);
-      }
+        /* box-shadow: h-shadow v-shadow blur spread color inset; */
+        /*
+          h-shadow 水平方向的阴影的位置
+          v-shadow 垂直方向的阴影的位置
+          blur 模糊距离，影子虚实程度，0就相当于实，类似于克隆了一份，数值越大，影子越模糊
+          spread 阴影的尺寸，阴影的大小
+          color 阴影的颜色
+          inset 内部阴影，如果不写，则为外部阴影
+         */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            /* 盒子阴影 */
+            /* box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.3); */
+        }
+
+        /* 鼠标经过，出现阴影 */
+        div:hover {
+            box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, 0.3);
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div></div>
-  </body>
+</body>
 </html>

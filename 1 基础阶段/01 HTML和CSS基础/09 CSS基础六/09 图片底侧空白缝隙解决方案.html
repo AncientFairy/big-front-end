@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>图片底侧空白缝隙解决方案</title>
     <style>
-      /* 
-            图片底层会有一个空白缝隙，原因是行内块元素和文字的基线对齐。
-                解决方案：
-                    - ①给图片添加vertical-align：middle|top|bottom等（提倡使用）。
-                    - ②将图片转换为块级元素display:block;
-        
-        */
-      div {
-        border: 2px solid red;
-      }
-      img {
-        vertical-align: bottom;
-      }
+        /*
+              图片底层会有一个空白缝隙，原因是行内块元素和文字的基线对齐。
+                  解决方案：
+                      - ①给图片添加vertical-align：middle|top|bottom等（提倡使用）。
+                      - ②将图片转换为块级元素display:block;
+
+          */
+        div {
+            border: 2px solid red;
+        }
+
+        img {
+            vertical-align: bottom;
+        }
     </style>
-  </head>
-  <body>
-    <div><img src="images/ldh.jpg" alt="" />我喜欢的颜色是pink</div>
-  </body>
+</head>
+<body>
+    <div><img src="images/ldh.jpg" alt=""/>我喜欢的颜色是pink</div>
+</body>
 </html>

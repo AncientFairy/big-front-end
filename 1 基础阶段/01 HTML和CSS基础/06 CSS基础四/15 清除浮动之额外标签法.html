@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>清除浮动之额外标签法</title>
     <style>
-      .box {
-        width: 800px;
-        border: 2px solid red;
-        background-color: pink;
-      }
-      .box .left {
-        float: left;
-        width: 200px;
-        height: 200px;
-        background-color: purple;
-      }
-      .box .right {
-        float: right;
-        width: 200px;
-        height: 200px;
-        background-color: skyblue;
-      }
-      .clear {
-        clear: both;
-      }
-      .footer {
-        height: 200px;
-        background-color: black;
-      }
+        .box {
+            width: 800px;
+            border: 2px solid red;
+            background-color: pink;
+        }
+
+        .box .left {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .box .right {
+            float: right;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: black;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="box">
-      <div class="left">左</div>
-      <div class="right">右</div>
-      <!-- 
-          额外标签法（也称为隔墙法）：
-            在浮动元素的末尾添加一个块级元素，添加样式为clear: both;
-      -->
-      <div class="clear"></div>
+        <div class="left">左</div>
+        <div class="right">右</div>
+        <!--
+            额外标签法（也称为隔墙法）：
+              在浮动元素的末尾添加一个块级元素，添加样式为clear: both;
+        -->
+        <div class="clear"></div>
     </div>
     <div class="footer"></div>
-  </body>
+</body>
 </html>

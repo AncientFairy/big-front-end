@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>复合选择器之后代选择器</title>
     <style>
-      /* 将ol里面的li选择出来，颜色改为粉色 */
-      ol li {
-        color: deeppink;
-      }
-      /* 将.nav下面的所有a的颜色变为红色 */
-      .nav li a {
-        color: red;
-      }
+        /* 将ol里面的li选择出来，颜色改为粉色 */
+        ol li {
+            color: deeppink;
+        }
+
+        /* 将.nav下面的所有a的颜色变为红色 */
+        .nav li a {
+            color: red;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <ol>
-      <li>我是ol的孩子</li>
-      <li>我是ol的孩子</li>
-      <li>
-        <ul>
-          <li>我是ol中的ul中的li</li>
-          <li>我是ol中的ul中的li</li>
-          <li>我是ol中的ul中的li</li>
-        </ul>
-      </li>
-      <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>
+            <ul>
+                <li>我是ol中的ul中的li</li>
+                <li>我是ol中的ul中的li</li>
+                <li>我是ol中的ul中的li</li>
+            </ul>
+        </li>
+        <li>我是ol的孩子</li>
     </ol>
 
     <ul>
-      <li>我是ul的孩子</li>
-      <li>我是ul的孩子</li>
-      <li>我是ul的孩子</li>
-      <li><a href="#">我是ul中的超链接</a></li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我是ul中的超链接</a></li>
     </ul>
 
     <ul class="nav">
-      <li>我是ul的孩子</li>
-      <li>我是ul的孩子</li>
-      <li>我是ul的孩子</li>
-      <li><a href="#">我是ul中的超链接</a></li>
-      <li><a href="#">我是ul中的超链接</a></li>
-      <li><a href="#">我是ul中的超链接</a></li>
-      <li><a href="#">我是ul中的超链接</a></li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我是ul中的超链接</a></li>
+        <li><a href="#">我是ul中的超链接</a></li>
+        <li><a href="#">我是ul中的超链接</a></li>
+        <li><a href="#">我是ul中的超链接</a></li>
     </ul>
-  </body>
+</body>
 </html>

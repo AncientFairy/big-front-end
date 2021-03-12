@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>清除浮动之父级添加after伪元素</title>
     <style>
-      .box {
-        width: 800px;
-        border: 2px solid red;
-        background-color: pink;
-      }
-      /* 清除浮动之父级添加after伪元素 */
-      .clearfix::after {
-        content: "";
-        display: block;
-        height: 0;
-        clear: both;
-        visibility: hidden;
-      }
-      /* IE6、7专用 */
-      .clearfix {
-        *zoom: 1;
-      }
-      .box .left {
-        float: left;
-        width: 200px;
-        height: 200px;
-        background-color: purple;
-      }
-      .box .right {
-        float: right;
-        width: 200px;
-        height: 200px;
-        background-color: skyblue;
-      }
-      .footer {
-        height: 200px;
-        background-color: black;
-      }
+        .box {
+            width: 800px;
+            border: 2px solid red;
+            background-color: pink;
+        }
+
+        /* 清除浮动之父级添加after伪元素 */
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        /* IE6、7专用 */
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .box .left {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .box .right {
+            float: right;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: black;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="box clearfix">
-      <div class="left">左</div>
-      <div class="right">右</div>
+        <div class="left">左</div>
+        <div class="right">右</div>
     </div>
     <div class="footer"></div>
-  </body>
+</body>
 </html>
