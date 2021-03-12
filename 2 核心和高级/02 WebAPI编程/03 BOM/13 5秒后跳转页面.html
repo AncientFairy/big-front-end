@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5秒后跳转页面</title>
+    <script>
+        /*
+        * 利用定时器做倒计时效果
+        * 时间到了，就跳转页面。 使用 location.href
+        */
+        window.onload = function () {
+            var div = document.querySelector('div');
+            var num = 5;
+            window.setInterval(function () {
+                div.innerHTML = '还剩' + (num--) + '秒';
+                if (num == 0) {
+                    window.location.href = 'https://www.baidu.com';
+                }
+            }, 1000);
+
+        }
+    </script>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

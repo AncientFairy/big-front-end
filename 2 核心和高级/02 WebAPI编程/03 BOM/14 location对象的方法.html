@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location对象的方法</title>
+    <script>
+        window.onload = function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click',function () {
+                // location.assign() 和href一样，可以跳转页面（也称为重定向页面）
+                window.location.assign('https://www.baidu.com');
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <button>点我跳转</button>
+</body>
+
+</html>
